@@ -1,0 +1,22 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+en:
+  en: "English"
+  vi: "Vietnamese"
+  hello: "Hello world"
+  base_title: "Ruby on Rails Tutorial Sample App"
+  static_pages:
+    home:
+      title: "Home"
+      h1: "Sample App"
+      p1: "This is the home page for the"
+      link_to_text: "Ruby on Rails Tutorial"
+      p2: "sample application."
+      help : "Help"
+      about : "About"
+      link_signup: "Sign up now!"
+      alt: "Rails logo"
+  layouts:
+    header:
+      title: "Home"
