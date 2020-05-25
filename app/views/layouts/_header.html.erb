@@ -1,0 +1,16 @@
+<% provide () %>
+<header class="navbar navbar-fixed-top
+navbar-inverse">
+  <div class="container">
+    <%= link_to "sample app", "#", id: "logo" %>
+    <nav>
+     <ul class="nav navbar-nav navbar-right">
+      <%= link_to t("en"), locale: :en %>
+      <%= link_to t("vi"), locale: :vi %>
+        <li><%= link_to t(".title"), "#" %></li>
+        <li><%= link_to t("static_pages.home.help"), "#" %></li>
+        <li><%= link_to t("static_pages.home.about"), "#" %></li>
+      </ul>
+    </nav>
+  </div>
+</header>

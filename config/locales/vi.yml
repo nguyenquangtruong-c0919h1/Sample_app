@@ -1,0 +1,11 @@
+vi:
+  base_title: "Ruby on Rails Tutorial Sample App"
+  static_pages:
+    home:
+      title: "Trang chủ"
+      h1: "Ứng dụng mẫu"
+      p1: "This is the home page for the"
+      link_to_text: "Ruby on Rails Tutorial"
+      p2: "sample application."
+      help : "Trợ giúp"
+      about : "Khác"
