@@ -1,3 +1,4 @@
 name_minimum: 3
 email_maximum: 255
 password_minimum: 6
+gravater_size: 80

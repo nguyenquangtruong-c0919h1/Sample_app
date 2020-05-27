@@ -20,3 +20,13 @@ en:
   layouts:
     header:
       title: "Home"
+  shared:
+    error_message:
+      title_error : "The form contains"
+  users:
+    new:
+      signup: "Sign Up"
+      name: "Name"
+      email: "Email"
+      password: "Password"
+      create: "Create my account"

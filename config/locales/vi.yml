@@ -9,3 +9,16 @@ vi:
       p2: "sample application."
       help : "Trợ giúp"
       about : "Khác"
+  layouts:
+    header:
+      title: "Trang chủ"
+  shared:
+    error_message:
+      title_error : "Biểu mẫu có chứa"
+  users:
+    new:
+      signup: "Đăng ký"
+      name: "Họ và tên"
+      email: "Email"
+      password: "Mật khẩu"
+      create: "Tạo tài khoản"
