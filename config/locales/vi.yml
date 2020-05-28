@@ -1,5 +1,14 @@
 vi:
+  activerecord:
+    attributes:
+      user:
+        signup: "Đăng ký"
+        name: "Họ và tên"
+        email: "Email"
+        password: "Mật khẩu"
+
   base_title: "Ruby on Rails Tutorial Sample App"
+
   static_pages:
     home:
       title: "Trang chủ"
@@ -7,18 +16,39 @@ vi:
       p1: "This is the home page for the"
       link_to_text: "Ruby on Rails Tutorial"
       p2: "sample application."
-      help : "Trợ giúp"
-      about : "Khác"
+
+
   layouts:
     header:
       title: "Trang chủ"
+      help : "Trợ giúp"
+      about : "Khác"
+      log_in: "Đăng nhập"
+      user: "Người dùng"
+      account: "Tài khoản"
+      profile: "Hồ sơ"
+      setting: "Cài đặt"
+      log_out: "Đăng xuất"
+
   shared:
     error_message:
       title_error : "Biểu mẫu có chứa"
+
   users:
     new:
       signup: "Đăng ký"
-      name: "Họ và tên"
+      create: "Tạo tài khoản"
+
+  users:
+    create:
+      welcome_to_the_sample_app: "Chào mừng tới Sample App"
+  sessions:
+    create:
+      invalid: "Email hoặc mật khẩu không đúng"
+    new:
+      log_in: "Đăng nhập"
       email: "Email"
       password: "Mật khẩu"
-      create: "Tạo tài khoản"
+      new_user: "Bạn chưa có tài khoản?"
+      sign_up_now: "Đăng ký ngay!"
+

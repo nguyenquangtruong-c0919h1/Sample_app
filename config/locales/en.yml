@@ -2,10 +2,18 @@
 # and are automatically loaded by Rails. If you want to use locales other
 # than English, add the necessary files in this directory.
 en:
+  activerecord:
+    attributes:
+      user:
+        signup: "Sign Up"
+        name: "Name"
+        email: "Email"
+        password: "Password"
   en: "English"
   vi: "Vietnamese"
   hello: "Hello world"
   base_title: "Ruby on Rails Tutorial Sample App"
+
   static_pages:
     home:
       title: "Home"
@@ -13,20 +21,40 @@ en:
       p1: "This is the home page for the"
       link_to_text: "Ruby on Rails Tutorial"
       p2: "sample application."
-      help : "Help"
-      about : "About"
+
       link_signup: "Sign up now!"
       alt: "Rails logo"
+
   layouts:
     header:
       title: "Home"
+      help : "Help"
+      about : "About"
+      log_in: "Log in"
+      user: "User"
+      account: "Account"
+      profile: "Profile"
+      setting: "Setting"
+      log_out: "Log out"
+
   shared:
     error_message:
       title_error : "The form contains"
+
   users:
     new:
       signup: "Sign Up"
-      name: "Name"
+      create: "Create my account"
+
+  users:
+    create:
+      welcome_to_the_sample_app: "Wellcome to the Sample App"
+  sessions:
+    create:
+      invalid: "Invalid email/password combination"
+    new:
+      log_in: "Log in"
       email: "Email"
       password: "Password"
-      create: "Create my account"
+      new_user: "New User?"
+      sign_up_now: "Sign up now!"
