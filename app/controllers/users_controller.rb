@@ -5,7 +5,9 @@ class UsersController < ApplicationController
   before_action :correct_user, only: [:edit, :update]
   before_action :admin_user, only: :destroy
 
-  def show; end
+  def show
+    @microposts = @user.microposts.paginate(page: params[:page])
+  end
 
   def new
     @user = User.new
@@ -34,11 +36,11 @@ class UsersController < ApplicationController
   def edit; end
 
   def index
-    @users = User.paginate(page: params[:page])
+    @users = User.paginate page: params[:page]
   end
 
   def update
-    if @user.update(user_params)
+    if @user.update user_params
       flash[:success] = t "users.edit.update_profile"
       redirect_to @user
     else
@@ -49,15 +51,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:name, :email, :password)
-  end
-
-  def logged_in_user
-    return if logged_in?
-
-    store_location
-    flash[:danger] = t "users.edit.please_login"
-    redirect_to login_url
+    params.require(:user).permit :name, :email, :password
   end
 
   def correct_user

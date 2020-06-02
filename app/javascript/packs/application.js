@@ -20,3 +20,4 @@ require("turbolinks").start()
 require("channels")
 require("jquery")
 import "bootstrap"
+require("packs/custom_micropost")
