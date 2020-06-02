@@ -45,10 +45,22 @@ en:
     new:
       signup: "Sign Up"
       create: "Create my account"
-
-  users:
+    index:
+      all_user: "All User"
+    user:
+      delete: "Delete"
+      are_you_sure: "You sure?"
+    edit:
+      edit_user: "Edit User"
+      save_change: "Save Change"
+      update_profile: "Update Your Profile"
+      change: "Change"
+      please_login: "Please Login"
     create:
-      welcome_to_the_sample_app: "Wellcome to the Sample App"
+      welcome_to_the_sample_app: "Wellcome to the Sample app"
+      errors_detected: "Errors deleted"
+      user_detected: "User detected"
+
   sessions:
     create:
       invalid: "Invalid email/password combination"

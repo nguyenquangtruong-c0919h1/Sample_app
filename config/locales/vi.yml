@@ -38,10 +38,22 @@ vi:
     new:
       signup: "Đăng ký"
       create: "Tạo tài khoản"
-
-  users:
+    index:
+      all_user: "Danh sách người dùng"
+    user:
+      delete: "Xóa"
+      are_you_sure: "Bạn có chắc?"
+    edit:
+      edit_user: "Sửa thông tin người dùng"
+      save_change: "Lưu thay đổi"
+      update_profile: "Cập nhật thông tin"
+      change: "Thay ảnh"
+      please_login: "Vui lòng Đăng nhập"
     create:
-      welcome_to_the_sample_app: "Chào mừng tới Sample App"
+      welcome_to_the_sample_app: "Chào mừng tới ứng dụng mẫu"
+      errors_detected: "Lỗi xóa"
+      user_detected: "Xóa thành công"
+
   sessions:
     create:
       invalid: "Email hoặc mật khẩu không đúng"
