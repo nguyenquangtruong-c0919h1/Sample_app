@@ -45,6 +45,10 @@ en:
       post: "Post"
       placeholder: "Compose new micropost..."
   users:
+    following:
+      following: "Following"
+    followers:
+      followers: "Followers"
     new:
       signup: "Sign Up"
       create: "Create my account"
@@ -63,6 +67,7 @@ en:
       welcome_to_the_sample_app: "Wellcome to the Sample app"
       errors_detected: "Errors deleted"
       user_detected: "User detected"
+      thanh_cong: "Success"
 
   sessions:
     message: "Account not activated.Check your email for the activation link."
@@ -76,7 +81,7 @@ en:
       new_user: "New User?"
       sign_up_now: "Sign up now!"
       remember: "Remember me on this computer"
-
+      forgot_password: "Forgot Password?  "
   account_activations:
     edit:
       account_activated: "Account activated!"
@@ -84,7 +89,8 @@ en:
   users:
     create:
       check_active: "Please check your email to activate your account"
-
+    new:
+      create: "Create"
   user_mailer:
     account_activation:
       title: "Sample App"
@@ -129,3 +135,11 @@ en:
       about_x_hours:
         one: "1 day"
         other: "%{count} hours"
+      x_minutes:
+        other: "%{count} minutes"
+
+  relationships:
+    create:
+      follow_error: "Fowllow Error"
+    destroy:
+      destroy_error: "Destroy Error"

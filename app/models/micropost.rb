@@ -1,9 +1,9 @@
 class Micropost < ApplicationRecord
   belongs_to :user
+
   has_one_attached :image
   scope :recent_posts, ->{order created_at: :desc}
-  scope :feed_user, ->(id){where user_id: id}
-
+  scope :feed_posts, ->(following_ids,id){where user_id: following_ids << id}
   validates :content, presence: true,
     length: {maximum: Settings.content_maximum}
   validates :image, content_type: {in: Settings.image_type,

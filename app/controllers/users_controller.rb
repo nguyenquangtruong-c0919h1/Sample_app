@@ -17,7 +17,7 @@ class UsersController < ApplicationController
     @user = User.new user_params
     if @user.save
       @user.send_activation_email
-      flash[:info] = t ".check_active"
+      flash[:info] =  t "thanh_cong"
       redirect_to root_url
     else
       render :new
@@ -46,6 +46,18 @@ class UsersController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def following
+    @title = t ".following"
+    @users = @user.following.paginate(page: params[:page])
+    render "show_follow"
+  end
+
+  def followers
+    @title = t ".followers"
+    @users = @user.followers.paginate(page: params[:page])
+    render "show_follow"
   end
 
   private
