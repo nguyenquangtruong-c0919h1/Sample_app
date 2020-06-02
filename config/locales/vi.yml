@@ -8,15 +8,17 @@ vi:
         password: "Mật khẩu"
 
   base_title: "Ruby on Rails Tutorial Sample App"
+  please_login: "Vui lòng đăng nhập."
 
   static_pages:
     home:
       title: "Trang chủ"
-      h1: "Ứng dụng mẫu"
-      p1: "This is the home page for the"
-      link_to_text: "Ruby on Rails Tutorial"
-      p2: "sample application."
-
+      sample_app: "Ứng dụng mẫu"
+      content_html: "This is the home page for the %{href} sample application."
+      content_href: "Ruby on Rails Tutorial"
+      micropost_feed: "Micropost Feed"
+      link_signup: "Đăng ký ngay!"
+      alt: "Rails logo"
 
   layouts:
     header:
@@ -33,6 +35,9 @@ vi:
   shared:
     error_message:
       title_error : "Biểu mẫu có chứa"
+    micropost_form:
+      post: "Đăng"
+      placeholder: "Soạn..."
 
   users:
     new:
@@ -58,6 +63,7 @@ vi:
     message: "Tài khoản chưa kích hoạt."
     create:
       invalid: "Email hoặc mật khẩu không đúng"
+      message: "Tài khoản chưa được kích hoạt. Kiểm tra email của bạn để biết liên kết kích hoạt."
     new:
       log_in: "Đăng nhập"
       email: "Email"
@@ -96,3 +102,26 @@ vi:
     new:
       title: "Quên mật khẩu"
       submit: "Gửi"
+
+  microposts:
+    message_format: "Định dạng ảnh không hợp lệ"
+    message_size: "Phải dưới 5MB"
+    posted: "Đăng cách đây"
+    ago: "trước."
+    delete: Xóa
+    create:
+      save_success: "Micropost đã được tạo!"
+      save_fail: "Micropost tạo thất bại!"
+    destroy:
+      destroy_success: "Micropost đã được xóa!"
+      destroy_fail: "Micropost xóa thất bại!"
+    correct_user:
+      correct_nil: "Micropost error"
+
+  datetime:
+    distance_in_words:
+      about_x_hours:
+        one: "1 ngày"
+        other: "%{count} giờ"
+      x_minutes:
+        other: "%{count} phút"

@@ -1,4 +1,3 @@
-<% provide () %>
 <header class="navbar navbar-fixed-top
 navbar-inverse">
 <div class="container">
@@ -7,7 +6,7 @@ navbar-inverse">
    <ul class="nav navbar-nav navbar-right">
     <%= link_to t("en"), locale: :en %>
     <%= link_to t("vi"), locale: :vi %>
-    <li><%= link_to t(".title"), "#" %></li>
+    <li><%= link_to t(".title"), root_url %></li>
     <li><%= link_to t(".help"), "#" %></li>
     <li><%= link_to t(".about"), "#" %></li>
     <% if logged_in? %>

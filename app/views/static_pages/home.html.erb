@@ -1,11 +1,29 @@
 <% provide :title, t(".title") %>
-<div class="center jumbotron">
-<h1><%= t ".h1" %></h1>
-<p>
-  <%= t ".p1" %>
-  <%= link_to t(".link_to_text"), href="https://www.railstutorial.org/" %>
-  <%= t ".p2" %>
-</p>
-<%= link_to t(".link_signup"), "#", class: "btn btn-lg btn-primary" %>
-</div>
-<%= link_to image_tag("cat.jpg", alt: t(".alt"), width: "500px"), "https://rubyonrails.org/" %>
+<% if logged_in? %>
+  <div class="row">
+    <aside class="col-md-4">
+      <section class="user_info">
+        <%= render "shared/user_info" %>
+      </section>
+      <section class="stats">
+        <%= render "shared/stats" %>
+      </section>
+      <section class="micropost_form">
+        <%= render "shared/micropost_form" %>
+      </section>
+    </aside>
+    <div class="col-md-8">
+      <h3><%= t ".micropost_feed" %></h3>
+      <%= render "shared/feed" %>
+      </div>
+  </div>
+<% else %>
+  <div class="center jumbotron">
+    <h1><%= t ".sample_app" %></h1>
+    <p>
+      <%= t(".content_html", href: link_to(t(".content_href"),"https://www.railstutorial.org/")) %>
+    </p>
+    <%= link_to t(".link_signup"), "#", class: "btn btn-lg btn-primary" %>
+  </div>
+  <%= link_to image_tag("cat.jpg", alt: t(".alt"), width: "500px"), "https://rubyonrails.org/" %>
+<% end %>

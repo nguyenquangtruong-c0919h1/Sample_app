@@ -9,19 +9,20 @@ en:
         name: "Name"
         email: "Email"
         password: "Password"
+
   en: "English"
   vi: "Vietnamese"
   hello: "Hello world"
   base_title: "Ruby on Rails Tutorial Sample App"
+  please_login: "Please log in."
 
   static_pages:
     home:
       title: "Home"
-      h1: "Sample App"
-      p1: "This is the home page for the"
-      link_to_text: "Ruby on Rails Tutorial"
-      p2: "sample application."
-
+      sample_app: "Sample App"
+      content_html: "This is the home page for the %{href} sample application."
+      content_href: "Ruby on Rails Tutorial"
+      micropost_feed: "Micropost Feed"
       link_signup: "Sign up now!"
       alt: "Rails logo"
 
@@ -40,7 +41,9 @@ en:
   shared:
     error_message:
       title_error : "The form contains"
-
+    micropost_form:
+      post: "Post"
+      placeholder: "Compose new micropost..."
   users:
     new:
       signup: "Sign Up"
@@ -65,6 +68,7 @@ en:
     message: "Account not activated.Check your email for the activation link."
     create:
       invalid: "Invalid email/password combination"
+      message: "Account not activated.Check your email for the activation link."
     new:
       log_in: "Log in"
       email: "Email"
@@ -103,3 +107,27 @@ en:
     new:
       titler: "Forgot password"
       submit: "Submit"
+
+  microposts:
+    message_format: "Must be a valid image format"
+    message_size: "Should be less than 5MB"
+    posted: "Posted"
+    ago: "ago."
+    delete: Delete
+    you_sure: "You sure?  "
+    create:
+      save_success: "Micropost created!"
+      save_fail: "Micropost create fail!"
+    destroy:
+      destroy_success: "Micropost deleted!"
+      destroy_fail: "Micropost not delete!"
+    correct_user:
+      correct_nil: "Micropost error"
+
+  datetime:
+    distance_in_words:
+      about_x_hours:
+        one: "1 day"
+        other: "%{count} hours"
+      x_minutes:
+        other: "%{count} minutes"
