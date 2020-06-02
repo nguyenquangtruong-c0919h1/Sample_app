@@ -4,10 +4,13 @@ class User < ApplicationRecord
 
   validates :name, presence: true, length: {minimum: Settings.name_minimum}
   validates :email, presence: true,
-  length: {maximum: Settings.email_maximum},
-  format: {with: VALID_EMAIL_REGEX},
-  uniqueness: {case_sensitive: false}
-  validates :password, length: {minimum: Settings.password_minimum}
+    length: {maximum: Settings.email_maximum},
+    format: {with: VALID_EMAIL_REGEX},
+    uniqueness: {case_sensitive: false}
+  validates :password, presence: true,
+    length: {minimum: Settings.password_minimum},
+    allow_nil: true
+
   has_secure_password
 
   before_save{email.downcase!}
@@ -19,6 +22,7 @@ class User < ApplicationRecord
 
   def authenticated? remember_token
     return false unless remember_digest
+
     BCrypt::Password.new(remember_digest).is_password? remember_token
   end
 
@@ -32,10 +36,10 @@ class User < ApplicationRecord
 
   def self.digest string
     cost = if ActiveModel::SecurePassword.min_cost
-     BCrypt::Engine::MIN_COST
-   else
-     BCrypt::Engine.cost
-   end
-   BCrypt::Password.create string, cost: cost
- end
+             BCrypt::Engine::MIN_COST
+           else
+             BCrypt::Engine.cost
+           end
+    BCrypt::Password.create string, cost: cost
+  end
 end
