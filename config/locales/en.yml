@@ -71,3 +71,19 @@ en:
       new_user: "New User?"
       sign_up_now: "Sign up now!"
       remember: "Remember me on this computer"
+
+  account_activations:
+    edit:
+      account_activated: "Account activated!"
+      invalid_activation: "Invalid activation link"
+  users:
+    create:
+      check_active: "Please check your email to activate your account"
+
+  user_mailer:
+    account_activation:
+      title: "Sample App"
+      hi: "Hi"
+      welcome_to_the_sample_app: "Welcome to the Sample App! Click on the link below to activate your
+        account:"
+      activate: "Activate"

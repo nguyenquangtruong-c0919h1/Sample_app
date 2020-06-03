@@ -65,3 +65,19 @@ vi:
       sign_up_now: "Đăng ký ngay!"
       remember: "Nhớ tài khoản"
 
+
+  account_activations:
+    edit:
+      account_activated: "Tài khoản đã được mở!"
+      invalid_activation: "Liên kết kích hoạt không hợp lệ"
+  users:
+    create:
+      check_active: "Hãy kiểm tra email của bạn để kích hoạt"
+
+  user_mailer:
+    account_activation:
+      title: "Ứng dụng mẫu"
+      hi: "Xin chào"
+      welcome_to_the_sample_app: "Chào mừng bạn đến với Ứng dụng mẫu! Nhấp vào liên kết dưới đây để kích hoạt tài khoản của bạn:"
+      activate: "Kích hoạt"
+
