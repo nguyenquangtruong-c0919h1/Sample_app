@@ -81,3 +81,16 @@ vi:
       welcome_to_the_sample_app: "Chào mừng bạn đến với Ứng dụng mẫu! Nhấp vào liên kết dưới đây để kích hoạt tài khoản của bạn:"
       activate: "Kích hoạt"
 
+  password_resets:
+    create:
+      email_send: "Email đã được gửi, hãy đặt lại mật khẩu"
+      email_found: "Không tìm thấy địa chỉ email"
+    update:
+      not_empty: "Không được rỗng"
+      password_success: "Mật khẩu đã được thay đổi."
+    edit:
+      title: "Đặt lại mật khẩu"
+      update_password: "Cập nhật mật khẩu"
+    new:
+      title: "Quên mật khẩu"
+      submit: "Gửi"

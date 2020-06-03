@@ -87,3 +87,17 @@ en:
       welcome_to_the_sample_app: "Welcome to the Sample App! Click on the link below to activate your
         account:"
       activate: "Activate"
+
+  password_resets:
+    create:
+      email_send: "Email sent with password reset instructions"
+      email_found: "Email address not found"
+    update:
+      not_empty: "Can't be empty"
+      password_success: "Password has been reset."
+    edit:
+      title: "Reset password"
+      update_password: "Update password"
+    new:
+      titler: "Forgot password"
+      submit: "Submit"
