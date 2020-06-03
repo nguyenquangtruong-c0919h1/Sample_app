@@ -1,7 +1,11 @@
 class UsersController < ApplicationController
-  def show
-    @user = User.find(params[:id])
-  end
+  before_action :logged_in_user, except: [:new, :create,
+    :show]
+  before_action :load_user, except: [:new, :index, :destroy]
+  before_action :correct_user, only: [:edit, :update]
+  before_action :admin_user, only: :destroy
+
+  def show;end
 
   def new
     @user = User.new
@@ -18,9 +22,58 @@ class UsersController < ApplicationController
     end
   end
 
+  def destroy
+    if @user.destroy
+      flash[:success] = t ".user_detected"
+    else
+      flash[:danger] = t ".error_detected"
+    end
+    redirect_to users_url
+  end
+
+  def edit;end
+
+  def index
+    @users = User.paginate(page: params[:page])
+  end
+
+  def update
+    if @user.update(user_params)
+      flash[:success] = t "users.edit.update_profile"
+      redirect_to @user
+    else
+      render :edit
+    end
+  end
+
   private
 
   def user_params
     params.require(:user).permit(:name, :email, :password)
+  end
+
+  def logged_in_user
+    return if logged_in?
+
+    store_location
+    flash[:danger] = t "users.edit.please_login"
+    redirect_to login_url
+  end
+
+  def correct_user
+    @user = User.find_by id: params[:id]
+    redirect_to(root_url) unless current_user? @user
+  end
+
+  def admin_user
+    redirect_to(root_url) unless current_user.admin?
+  end
+
+  def load_user
+    @user = User.find_by id: params[:id]
+    return if @user
+
+    flash[:danger] = t "error.invalid_ID"
+    redirect_to root_url
   end
 end
