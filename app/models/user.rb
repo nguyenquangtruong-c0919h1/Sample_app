@@ -1,9 +1,12 @@
 class User < ApplicationRecord
-  attr_accessor :remember_token, :activation_token, :reset_token
-  before_save :downcase_email
-  before_create :create_activation_digest
-
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i.freeze
+
+  attr_accessor :remember_token, :activation_token, :reset_token
+
+  before_create :create_activation_digest
+  before_save{email.downcase!}
+
+  has_many :microposts, dependent: :destroy
 
   validates :name, presence: true, length: {minimum: Settings.name_minimum}
   validates :email, presence: true,
@@ -15,8 +18,6 @@ class User < ApplicationRecord
     allow_nil: true
 
   has_secure_password
-
-  before_save{email.downcase!}
 
   def remember
     remember_token = User.new_token
@@ -48,7 +49,7 @@ class User < ApplicationRecord
   end
 
   def activate
-    update_attributes(activated: true, activated_at: Time.zone.now)
+    update_columns activated: true, activated_at: Time.zone.now
   end
 
   def send_activation_email
@@ -65,11 +66,11 @@ class User < ApplicationRecord
     UserMailer.password_reset(self).deliver_now
   end
 
-  private
-
-  def downcase_email
-    self.email = email.downcase
+  def feed
+    Micropost.feed_user(id).recent_posts
   end
+
+  private
 
   def create_activation_digest
     self.activation_token = User.new_token
