@@ -40,6 +40,10 @@ vi:
       placeholder: "Soạn..."
 
   users:
+    following:
+      following: "Following"
+    followers:
+      followers: "Followers"
     new:
       signup: "Đăng ký"
       create: "Tạo tài khoản"
@@ -58,6 +62,9 @@ vi:
       welcome_to_the_sample_app: "Chào mừng tới ứng dụng mẫu"
       errors_detected: "Lỗi xóa"
       user_detected: "Xóa thành công"
+      check_active: "Hãy kiểm tra email của bạn để kích hoạt"
+      thanh_cong: "Success"
+
 
   sessions:
     message: "Tài khoản chưa kích hoạt."
@@ -71,15 +78,12 @@ vi:
       new_user: "Bạn chưa có tài khoản?"
       sign_up_now: "Đăng ký ngay!"
       remember: "Nhớ tài khoản"
-
+      forgot_password: "Quên mật khẩu?"
 
   account_activations:
     edit:
       account_activated: "Tài khoản đã được mở!"
       invalid_activation: "Liên kết kích hoạt không hợp lệ"
-  users:
-    create:
-      check_active: "Hãy kiểm tra email của bạn để kích hoạt"
 
   user_mailer:
     account_activation:
@@ -125,3 +129,10 @@ vi:
         other: "%{count} giờ"
       x_minutes:
         other: "%{count} phút"
+
+  relationships:
+    create:
+      follow_error: "Theo dõi không thành công"
+    destroy:
+      destroy_error: "Bỏ theo dõi không thành công"
+
